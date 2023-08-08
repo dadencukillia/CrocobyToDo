@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: 'nunito';
+    src: url('assets/fonts/nunito-v16-latin-regular.woff2') format('woff2');
+} 
+body {
+    padding: 10px;
+    background-color: white;
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    font-family: 'nunito';
+}
+img, picture {
+    pointer-events: none;
+}
+.red-color {
+    color: red;
+}
+
+form {
+    margin-bottom: 20px;
+}
+form > input {
+    border: 1px solid rgb(147, 147, 147);
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+.error {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.clearall {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid rgb(147, 147, 147);
+    border-radius: 5px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.task {
+    gap: 10px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    transition: 500ms background;
+}
+.task:hover {
+    background-color: #eeeeeeee;
+}
+.task > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 0 5px;
+    color: red;
+    cursor: pointer;
+    transition: 500ms all;
+    width: 55px;
+}
+.task > button:hover {
+    background-color: red;
+    color: white;
+}
+.task > span {
+    white-space: nowrap;
+    cursor: default;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.nothinghere {
+    cursor: default;
+    text-align: center
+}
